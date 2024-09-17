@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机科学与技术学院2024年院队纳新情况</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>纳新结果</h1>
+    <div id="result"></div>
+
+    <script>
+        function getQueryParams() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return {
+                input: urlParams.get('input'),
+                original: urlParams.get('original')
+            };
+        }
+
+        function displayResult() {
+            const params = getQueryParams();
+            const userInput = params.input;
+
+            const n1 = "202400130052";
+            const n2 = "202400130259";
+            const n3 = "202400130032";
+
+            const resultDiv = document.getElementById('result');
+
+            if ( (userInput === n1) || (userInput === n2) || (userInput === n3) ) {
+                resultDiv.textContent = '恭喜你，你被选中成为计算机足球队的一员';
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.textContent = '很遗憾，你没有被选中，再接再厉，明年还有机会';
+                resultDiv.style.color = 'red';
+            }
+        }
+
+        displayResult(); // 调用函数以显示结果
+    </script>
+</body>
+</html>
