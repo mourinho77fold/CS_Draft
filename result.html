@@ -60,11 +60,14 @@
             const n1 = "202400130052";
             const n2 = "202400130259";
             const n3 = "202400130032";
+            const n4 = "202300130001";
+            const n5 = "202401130268";
 
             const resultDiv = document.getElementById('result');
 
-            if ( (userInput === n1) || (userInput === n2) || (userInput === n3) ) {
-                resultDiv.textContent = '恭喜你，你被选中成为计算机足球队的一员';
+            if ( (userInput === n1) || (userInput === n2) || (userInput === n3) || (userInput === n4) || (userInput === n5)) {
+                resultDiv.textContent = '恭喜你，你被选中成为计算机足球队的一员。';
+                resultDiv.textContent = 'QQ群号为：602395001 ，请尽快入群！'
                 resultDiv.style.color = 'green';
             } else {
                 resultDiv.textContent = '很遗憾，你没有被选中，再接再厉，明年还有机会';
